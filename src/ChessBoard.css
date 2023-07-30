@@ -1,0 +1,49 @@
+.chessboard {
+  margin-left: auto;
+  margin-right: auto;
+
+  display: grid;
+  grid-template-rows: repeat(8, 1fr);
+  width: 600px;
+  height: 600px;
+
+  user-select: none;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: 1fr;
+}
+
+.square {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+
+  user-select: none;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+}
+
+.square>img {
+  user-select: none;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+}
+
+.square.selected {
+  background-color: white;
+}
+
+.light {
+  background-color: #f0d9b5;
+}
+
+.dark {
+  background-color: #b58863;
+}
