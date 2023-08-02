@@ -1,11 +1,14 @@
 // BotUploader.tsx
 import React from 'react';
 
-const BotUploader: React.FC = () => {
+interface BotUploadProps {
+    handleBotUpload: (event: React.ChangeEvent<HTMLInputElement>) => void;
+}
+const BotUploader: React.FC<BotUploadProps> = ({ handleBotUpload }) => {
     return (
         <div>
             <h2>Upload your bot</h2>
-            <input type="file" />
+            <input type="file" onChange={handleBotUpload} />
         </div>
     );
 };
